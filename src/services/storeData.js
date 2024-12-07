@@ -1,7 +1,7 @@
 const { Firestore } = require('@google-cloud/firestore');
 const path = require('path');
 
-const pathKey = path.resolve('./submissionmlgc-toti-firebase-adminsdk-btr5w-5cd7ea6faf.json')
+const pathKey = path.resolve(__dirname, '../submissionmlgc-toti-8384c2fcc7dc.json');
      
 async function storeData(id, data) {
 
