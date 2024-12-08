@@ -1,7 +1,7 @@
 const { Firestore } = require('@google-cloud/firestore');
 const path = require('path');
 
-const pathKey = path.resolve(__dirname, '../submissionmlgc-toti-8384c2fcc7dc.json'); //ganti dengan nama file security kalian, lalu tempatkan didalam folder ../src/(security key)
+const pathKey = path.resolve(__dirname, '../submissionmlgc-toti-8384c2fcc7dc.json'); //ganti dengan nama file security kalian, lalu tempatkan didalam folder ../src/(security_key)
      
 async function storeData(id, data) {
 
