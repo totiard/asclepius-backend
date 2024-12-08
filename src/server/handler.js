@@ -23,7 +23,7 @@ async function postPredictHandler(request, h) {
 
   const response = h.response({
     status: "success",
-    message: "Model is predicted successfully", // Tetap konsisten
+    message: "Model is predicted successfully", // Response tetap konsisten
     data,
   });
   response.code(201);
@@ -33,9 +33,9 @@ async function postPredictHandler(request, h) {
 async function predictHistories(request, h) {
   const { Firestore } = require("@google-cloud/firestore");
   const db = new Firestore({
-    projectId: "submissionmlgc-toti-11",
+    projectId: "submissionmlgc-toti-11", //ganti dengan Project ID kalian
   });
-  const predictCollection = db.collection("predictions");
+  const predictCollection = db.collection("predictions"); //nama collection di firestore kalian
   const snapshot = await predictCollection.get();
   const result = [];
   snapshot.forEach((doc) => {
