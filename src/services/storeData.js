@@ -7,7 +7,7 @@ async function storeData(id, data) {
 
   try {
     const db = new Firestore({
-      projectId: 'submissionmlgc-toti-11', //ganti dengan project ID kalian
+      projectId: 'submissionmlgc-toti-11', //ganti dengan Project ID kalian
       keyFilename: pathKey,
     });
  
