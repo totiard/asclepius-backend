@@ -23,10 +23,7 @@ async function postPredictHandler(request, h) {
 
   const response = h.response({
     status: "success",
-    message:
-      confidenceScore > 99
-        ? "Model is predicted successfully"
-        : "Payload content length greater than maximum allowed: 1000000",
+    message: "Model is predicted successfully", // Tetap konsisten
     data,
   });
   response.code(201);
@@ -34,10 +31,9 @@ async function postPredictHandler(request, h) {
 }
 
 async function predictHistories(request, h) {
-  const { model } = request.server.app;
   const { Firestore } = require("@google-cloud/firestore");
   const db = new Firestore({
-    projectId: "submissionmlgc-toti",
+    projectId: "submissionmlgc-toti-11",
   });
   const predictCollection = db.collection("predictions");
   const snapshot = await predictCollection.get();
