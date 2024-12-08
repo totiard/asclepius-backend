@@ -1,0 +1,4 @@
+letakkan file security disini.
+key didapatkan dari service account sebagai firestore admin.
+download key berupa file json.
+lalu sesuaikan nama file pada (./src/services/storeData.js) dengan nama file ini.
